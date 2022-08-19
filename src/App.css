@@ -1,0 +1,56 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  height: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3em;
+  width: 5em;
+}
+#valid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: green;
+}
+#notValid {
+  color: red;
+}
+#email, #password {
+  margin: 0 1em 0 0.25em;
+  width: 20em;
+}
+#container {
+  display: flex;
+  justify-content: center;
+  width: 50vw;
+}
+.padding {
+  padding: 1em;
+}
+.shown {
+  outline: 1px dashed black;
+  background-color: rgba(0,255,0,0.2);
+}
