@@ -1,5 +1,6 @@
 # My Firebase Auth
 
+![Use case video](./UseExample.gif)
 Built with create-react-app
 
 ## Setup
