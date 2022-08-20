@@ -5,27 +5,22 @@ import {
   signOut,
 } from 'firebase/auth';
 import { initializeApp } from "firebase/app";
+
 import firebaseConfig from './.env.js';
+
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
 const registerWithEmailAndPassword = async (name, email, password) => {
   try {
-    const res = await createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        const user = userCredential.user;
-      });
-    const user = res.user;
+    await createUserWithEmailAndPassword(auth, email, password);
   } catch (error) {
     console.error(error);
   }
 };
 const logInWithEmailAndPassword = async (email, password) => {
   try {
-    await signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        const user = userCredential.user;
-      });
+    await signInWithEmailAndPassword(auth, email, password);
   } catch (error) {
     console.error(error);
   }
@@ -34,10 +29,10 @@ const logOut = async (auth, setUser) => {
   try {
     await signOut(auth)
       .then(() => {
-        setUser("")
+        setUser("");
       })
   } catch (error) {
-    console.error('Error - Sign Out');
+    console.error(error);
   }
 }
 
